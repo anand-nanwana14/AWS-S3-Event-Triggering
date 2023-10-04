@@ -15,7 +15,7 @@ def lambda_handler(event, context):
     sns_client.publish(
        TopicArn=topic_arn,
        Subject='S3 Object Created',
-       Message=f"File '{object_key}' was uploaded to bucket '{bucket_name}'"
+       Message=f"New Movie '{object_key}' was uploaded to Netflix/n Get Ready For The Thrilled Experience"
     )
 
     # Example: Trigger another Lambda function
