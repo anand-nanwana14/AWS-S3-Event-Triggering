@@ -2,7 +2,7 @@ import boto3
 import json
 
 def lambda_handler(event, context):
-    # Extract relevant information from the S3 event trigger
+    # Extract relevant information from the S3 event triggers
     bucket_name = event['Records'][0]['s3']['bucket']['name']
     object_key = event['Records'][0]['s3']['object']['key']
 
