@@ -37,7 +37,7 @@ role_arn=$(echo "$role_response" | jq -r '.Role.Arn')
 # Print the role ARN
 echo "Role ARN: $role_arn"
 
-# Attach Permissions to the Role
+# Attach Permissions to the Roles
 aws iam attach-role-policy --role-name $role_name --policy-arn arn:aws:iam::aws:policy/AWSLambda_FullAccess
 aws iam attach-role-policy --role-name $role_name --policy-arn arn:aws:iam::aws:policy/AmazonSNSFullAccess
 
